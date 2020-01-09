@@ -1,3 +1,14 @@
+/*
+
+============================================
+; Title: Assignment 5.1
+; Author: Professor Krasso
+; Date: 8 January 2020
+; Modified By: Bohnet Christine
+; Description: Discussion Advanced Arrays
+============================================
+
+*/ 
 
 const header = require('../bohnet-header.js');
 console.log(header.display('Christine', 'Bohnet', 'bohnet-assignment-5.1'))
