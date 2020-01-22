@@ -1,0 +1,46 @@
+<!--
+============================================
+; Title:  bohnet-assignment-7.4.html
+; Author: Chris Bohnet
+; Date:   13 January 2020
+; Description: Demonstrates inline JavaScript Functions
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <title>Inline JavaScript Functions</title>
+
+    <link rel="stylesheet" href="../site.css">
+
+</head>
+<body>
+
+<div id="list2"></div>
+<script>
+  document.getElementById('list2').innerHTML = "<h1>Computer Components</h1>" +
+    "<table id='tableData'>" +
+    "<thead>" +
+    "<tr>" +
+    "<th>Id</th>" +
+    "<th>Name</th>" +
+"<th>Amount</th>" +
+    "<th>Functions</th>" +
+       
+
+
+ "</tr>" +
+    "</thead>" +
+    "<tbody>" +
+    "<tr><td id='tableId1'>1</td><td>Laptop</td><td>1,500.99</td><td><a href=javascript:alert(document.getElementById('tableId1').innerHTML);>EDIT</a> | <a href=javascript:confirm(`Delete?`)>DELETE</a></td></tr>" +
+    "<tr><td id='tableId2'>2</td><td>Motherboard</td><td>35.70</td><td><a href=javascript:alert(document.getElementById('tableId2').innerHTML);>EDIT</a> | <a href=javascript:confirm(`Delete?`)>DELETE</a></td></tr>" +
+    "<tr><td id='tableId3'>3</td><td>Monitor</td><td>174.99</td><td><a href=javascript:alert(document.getElementById('tableId3').innerHTML);>EDIT</a> | <a href=javascript:confirm(`Delete?`)>DELETE</a></td></tr>" +
+    "<tr><td id='tableId4'>4</td><td>Mouse</td><td>13.99</td><td><a href=javascript:alert(document.getElementById('tableId4').innerHTML);>EDIT</a> | <a href=javascript:confirm(`Delete?`)>DELETE</a></td></tr>" +
+    "<tr><td id='tableId5'>5</td><td>Keyboard</td><td>14.50</td><td><a href=javascript:alert(document.getElementById('tableId5').innerHTML);>EDIT</a> | <a href=javascript:confirm(`Delete?`)>DELETE</a></td></tr>" +
+    "</tbody>" +
+    "</table>"
+</script>
+</body>
+</html>
