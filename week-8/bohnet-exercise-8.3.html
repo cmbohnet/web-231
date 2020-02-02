@@ -1,0 +1,71 @@
+<!--
+============================================
+; Title:  bohnet-assignment-8.3.html
+; Author: Chris Bohnet
+; Date:   1 February 2020
+; Description: jQuery assignment
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Exercise 8.3</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- you will need to the href to point to your root directories css file -->
+  <link rel="stylesheet" href="../site.css">
+  
+</head>
+<body>
+<div id="colorbar"></div>
+
+<p id="loren"  style="display: none">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+</p>
+
+<input id="btnToggle" type="button" value="Show" name="btnToggle" />
+
+<script type="text/javascript">
+  $(function () {
+        $("#btnToggle").click(function () {
+            if ($(this).val() == "Show") {
+                $("#loren").show();
+                $(this).val("Hide");
+            } else {
+                $("#loren").hide();
+                $(this).val("Show");
+            }
+      });
+  });
+  </script>
+   <div id='move'>
+   <table> 
+    <thead> 
+        <tr> 
+            <th>ID</th> 
+            <th>Type</th> 
+        </tr> 
+    </thead> 
+    <tbody> 
+        <tr><td> <a  href="#" class="fruitId">1 </a></td><td>Oranges</td></tr> 
+        <tr><td>  <a  href="#" class="fruitId">2 </a></td><td>Apples</td></tr> 
+        <tr><td>  <a  href="#" class="fruitId">3 </a></td><td>Pears</td></tr> 
+        <tr><td> <a  href="#" class="fruitId">4 </a></td><td>Limes</td></tr> 
+        <tr><td> <a  href="#" class="fruitId">5 </a></td><td>Lemons</td></tr> 
+    </tbody> 
+    </table>
+</div>
+    <script type="text/javascript">
+        $(function() {
+            $(".fruitId").click(function(event) {
+            event.preventDefault();
+            var fruitId = $(this).text();
+            var fruitType = $(this).closest("td").next().text();
+            alert("{fruit_id: " + fruitId + ", fruit_type: " + fruitType + "}");
+        });
+    });
+    </script>       
+</body>
+</html>
